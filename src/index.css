@@ -1,6 +1,10 @@
 body {
   margin: 10px;
   padding: 10px;
+  background-color: white;
+
+
+
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,4 +15,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+
+    border-left: solid 50px #eaeaf0;
+    border-right: solid 50px #eaeaf0;
+    border-top: solid 100px #eaeaf0;
+    border-bottom: solid 100px #eaeaf0;
+    border-radius: 10px;
+
+  }
 }

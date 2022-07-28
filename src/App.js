@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import './App.css';
-import { Slider } from '@material-ui/core'
 import Step1 from './Step1'
 import Step2 from './Step2';
 import Step3 from './Step3';
@@ -29,7 +28,7 @@ function App() {
 
     <div className="parent">
 
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className='header'>
         <img src={logo} alt="Logo" />
         <h1>Eden</h1>
       </div>
@@ -38,7 +37,7 @@ function App() {
       </div>
 
 
-      <div className='outerContainer'>
+      <div>
         {showStep(currentStep)}
       </div>
 
