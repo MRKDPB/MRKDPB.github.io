@@ -18,6 +18,33 @@
 
 }
 
+.MuiStep-horizontal {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.MuiStepLabel-iconContainer {
+    display: flex;
+    flex-shrink: 0;
+    padding-right: 0px !important;
+}
+
+.MuiStepLabel-active>div {
+    background-color: #eaeaf0;
+}
+
+.MuiStepLabel-active>div>div {
+    background-color: #4424D6;
+}
+
+.MuiStepLabel-completed>div {
+    background-color: #4424D6;
+}
+
+.MuiStepLabel-label {
+    background-color: #eaeaf0;
+}
+
 .container>form>input {
     height: 30px;
     margin-top: 5px;

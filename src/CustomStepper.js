@@ -10,41 +10,21 @@ import { multiStepContext } from './StepContext'
 
 const DummyConnector = () => {
     return (
-        <div style={{ backgroundColor: "#eaeaf0", width: 40, height: 2, position: "absolute", zIndex: 2 }}></div>
+        <div style={{
+            width: 60,
+            height: 2
+        }}>
+            <div className="progressBar" style={{ width: 30, height: 2 }}>
+
+            </div>
+        </div>
     );
 }
-
-const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
-    [`&.${stepConnectorClasses.alternativeLabel}`]: {
-        top: 22
-    },
-    [`&.${stepConnectorClasses.active}`]: {
-        [`& .${stepConnectorClasses.line}`]: {
-            backgroundColor: "#4424D6"
-
-        }
-    },
-    [`&.${stepConnectorClasses.completed}`]: {
-        [`& .${stepConnectorClasses.line}`]: {
-            backgroundColor: "#4424D6"
-
-        }
-    },
-    [`& .${stepConnectorClasses.line}`]: {
-        height: 2,
-        border: 0,
-        width: 40,
-        backgroundColor: "#eaeaf0",
-        borderRadius: 1,
-
-
-    }
-}));
 
 const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
     backgroundColor:
         theme.palette.mode === "dark" ? theme.palette.grey[700] : "#ccc",
-    zIndex: 1,
+    zIndex: 3,
     color: "#fff",
     width: 40,
     height: 40,
@@ -105,24 +85,20 @@ const CustomStepper = () => {
     const { currentStep, finalData } = useContext(multiStepContext);
     return (
         <Stepper style={{ padding: '10px', margin: '10px' }}
-            // alternativeLabel
             activeStep={currentStep - 1}
-            connector={<DummyConnector />}
         >
             <Step>
-                <StepLabel StepIconComponent={ColorlibStepIcon}></StepLabel>
+                <StepLabel StepIconComponent={ColorlibStepIcon}><DummyConnector /></StepLabel>
+            </Step>
+            <Step>
+                <StepLabel StepIconComponent={ColorlibStepIcon}><DummyConnector /></StepLabel>
+            </Step>
+            <Step>
+                <StepLabel StepIconComponent={ColorlibStepIcon}><DummyConnector /></StepLabel>
             </Step>
             <Step>
                 <StepLabel StepIconComponent={ColorlibStepIcon}></StepLabel>
             </Step>
-            <Step>
-                <StepLabel StepIconComponent={ColorlibStepIcon}></StepLabel>
-            </Step>
-            <Step>
-                <StepLabel StepIconComponent={ColorlibStepIcon}></StepLabel>
-            </Step>
-
-
         </Stepper>
     );
 
