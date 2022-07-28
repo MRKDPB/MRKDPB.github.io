@@ -8,7 +8,6 @@ import Step4 from './Step4';
 import CustomStepper from './CustomStepper';
 import { multiStepContext } from './StepContext'
 import logo from './logo.png';
-// import { ColorlibConnector, ColorlibStepIcon } from './CustomStepper'
 
 function App() {
   const { currentStep, finalData } = useContext(multiStepContext);
